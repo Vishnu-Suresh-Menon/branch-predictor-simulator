@@ -1,2 +1,3 @@
 # branch-predictor-simulator
-Repository to hold the project files related the branch prediction simulator project done during the masters course at NCSU
+
+This project aimed at designing branch predictors well suited to the SPECint95 benchmarks. Here, it models a gshare branch predictor with parameters {m, n}, where m is the number of low-order PC bits used to form the prediction table index and n is the number of bits in the global branch history register. Also the project models a bimodal branch predictor (when n = 0) and hybrid predictor that selects between bimodal and gshare predictors using a chooser table. Moreover, designed a set-associative branch target buffer (BTB) that stores information about previously seen branches, ignoring the lower two bits of the PC as they are zeros for an ISA with the instruction size of 4 bytes.
